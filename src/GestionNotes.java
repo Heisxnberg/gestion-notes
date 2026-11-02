@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class GestionNotes {
-
+    // Constantes du calcul
     public static void main(String[] args) {
         final double POIDS_DEVOIR = 0.4;
         final double POIDS_EXAMEN = 0.6;
@@ -15,7 +15,7 @@ public class GestionNotes {
         System.out.println("==============================");
         System.out.println("   RELEVÉ DE NOTES - L2");
         System.out.println("==============================");
-
+// Saisie de l'identité
          System.out.print("Prénom : ");
         String prenom = sc.nextLine();
 
@@ -29,7 +29,7 @@ public class GestionNotes {
         System.out.print("Matricule : ");
         String matricule = sc.nextLine();
 
-
+// Saisie des notes
 
         System.out.print("Devoir Algorithmique : ");
         double devoirAlgo = sc.nextDouble();
@@ -56,12 +56,13 @@ public class GestionNotes {
         double moyenneAnglais = devoirAnglais * POIDS_DEVOIR
                 + examenAnglais * POIDS_EXAMEN;
         int sommeCoefs = COEF_ALGO + COEF_BD + COEF_ANGLAIS;
-
+// Calcul des moyennes
         double moyenneGenerale =
                 (moyenneAlgo * COEF_ALGO
                         + moyenneBd * COEF_BD
                         + moyenneAnglais * COEF_ANGLAIS)
                         / sommeCoefs;
+        // Affichage du relevé
         System.out.println("Brut : " + moyenneAlgo + " | "
                 + moyenneBd + " | " + moyenneAnglais
                 + " | " + moyenneGenerale);
