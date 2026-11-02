@@ -43,5 +43,29 @@ public class GestionNotes {
         System.out.println("HI " + nomComplet + ", vous avez " + ageSaisi + " ans");
 
         input.close();
+        System.out.print("Devoir Algorithmique : ");
+        double devoirAlgo = sc.nextDouble();
+
+        System.out.print("Examen Algorithmique : ");
+        double examenAlgo = sc.nextDouble();
+        double moyenneAlgo = devoirAlgo * POIDS_DEVOIR
+                + examenAlgo * POIDS_EXAMEN;
+
+        System.out.print("Devoir Base de données : ");
+        double devoirBd = sc.nextDouble();
+
+
+        System.out.print("Examen Base de données : ");
+        double examenBd = sc.nextDouble();
+        double moyenneBd = devoirBd * POIDS_DEVOIR
+                + examenBd * POIDS_EXAMEN;
+
+        System.out.print("Devoir Anglais : ");
+        double devoirAnglais = sc.nextDouble();
+
+        System.out.print("Examen Anglais : ");
+        double examenAnglais = sc.nextDouble();
+        double moyenneAnglais = devoirAnglais * POIDS_DEVOIR
+                + examenAnglais * POIDS_EXAMEN;
     }
 }
