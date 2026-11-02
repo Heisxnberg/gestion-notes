@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class GestionNotes {
-
+// constantes de calcul
     public static void main(String[] args) {
         final double POIDS_DEVOIR = 0.4;
         final double POIDS_EXAMEN = 0.6;
@@ -15,7 +15,8 @@ public class GestionNotes {
         System.out.println("==============================");
         System.out.println("   RELEVÉ DE NOTES - L2");
         System.out.println("==============================");
-        System.out.print("Prénom : ");
+        // Saisie de l'identité
+         System.out.print("Prénom : ");
         String prenom = sc.nextLine();
 
         System.out.print("Nom : ");
@@ -28,17 +29,7 @@ public class GestionNotes {
         System.out.print("Matricule : ");
         String matricule = sc.nextLine();
 
-        System.out.println("Étudiant : " + prenom + " " + nom + " (" + age + " ans)");
-        System.out.println("Matricule : " + matricule);
-
-        System.out.print("Votre âge svp : ");
-        int ageSaisi = sc.nextInt();
-        sc.nextLine();
-
-        System.out.print("Quel est votre nom complet : ");
-        String nomComplet = sc.nextLine();
-
-        System.out.println("HI " + nomComplet + ", vous avez " + ageSaisi + " ans");
+        // Saisie des notes
 
         System.out.print("Devoir Algorithmique : ");
         double devoirAlgo = sc.nextDouble();
@@ -65,12 +56,13 @@ public class GestionNotes {
         double moyenneAnglais = devoirAnglais * POIDS_DEVOIR
                 + examenAnglais * POIDS_EXAMEN;
         int sommeCoefs = COEF_ALGO + COEF_BD + COEF_ANGLAIS;
-
+// Calcul des moyennes
         double moyenneGenerale =
                 (moyenneAlgo * COEF_ALGO
                         + moyenneBd * COEF_BD
                         + moyenneAnglais * COEF_ANGLAIS)
                         / sommeCoefs;
+        // Affichage du relevé
         System.out.println("Brut : " + moyenneAlgo + " | "
                 + moyenneBd + " | " + moyenneAnglais
                 + " | " + moyenneGenerale);
