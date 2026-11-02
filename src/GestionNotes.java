@@ -4,6 +4,12 @@ import java.util.Scanner;
 public class GestionNotes {
 
     public static void main(String[] args) {
+        final double POIDS_DEVOIR = 0.4;
+        final double POIDS_EXAMEN = 0.6;
+
+        final int COEF_ALGO = 3;
+        final int COEF_BD = 2;
+        final int COEF_ANGLAIS = 1;
         Scanner sc = new Scanner(System.in);
 
         System.out.println("==============================");
