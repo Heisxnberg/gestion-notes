@@ -31,18 +31,15 @@ public class GestionNotes {
         System.out.println("Étudiant : " + prenom + " " + nom + " (" + age + " ans)");
         System.out.println("Matricule : " + matricule);
 
-        Scanner input = new Scanner(System.in);
-
         System.out.print("Votre âge svp : ");
-        int ageSaisi = input.nextInt();
-        input.nextLine();
+        int ageSaisi = sc.nextInt();
+        sc.nextLine();
 
         System.out.print("Quel est votre nom complet : ");
-        String nomComplet = input.nextLine();
+        String nomComplet = sc.nextLine();
 
         System.out.println("HI " + nomComplet + ", vous avez " + ageSaisi + " ans");
 
-        input.close();
         System.out.print("Devoir Algorithmique : ");
         double devoirAlgo = sc.nextDouble();
 
@@ -67,5 +64,15 @@ public class GestionNotes {
         double examenAnglais = sc.nextDouble();
         double moyenneAnglais = devoirAnglais * POIDS_DEVOIR
                 + examenAnglais * POIDS_EXAMEN;
+        int sommeCoefs = COEF_ALGO + COEF_BD + COEF_ANGLAIS;
+
+        double moyenneGenerale =
+                (moyenneAlgo * COEF_ALGO
+                        + moyenneBd * COEF_BD
+                        + moyenneAnglais * COEF_ANGLAIS)
+                        / sommeCoefs;
+        System.out.println("Brut : " + moyenneAlgo + " | "
+                + moyenneBd + " | " + moyenneAnglais
+                + " | " + moyenneGenerale);
     }
 }
